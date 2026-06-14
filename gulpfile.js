@@ -79,6 +79,9 @@ gulp.task('export', function(){
   let BuildImg = gulp.src('app/img/**/*.*')
     .pipe(gulp.dest('dist/img'));
 
+  let BuildPosts = gulp.src('app/posts/**/*.json')
+    .pipe(gulp.dest('dist/posts'));
+
   return merge(buildHtml, BuildCss, BuildJs, BuildFonts, BuildImg);
 });
 
